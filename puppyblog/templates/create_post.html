@@ -1,0 +1,22 @@
+{%extends "base.html"%}
+{%block content%}
+<div class="jumbotron">
+    <h1>Hello {{current_user.user_name}}!</h1>
+    <div class="container">
+        <form class="form-group" method="POST">
+            {{form.hidden_tag()}}
+            <div class="form-group">
+                {{form.title.label(class="form-group-label")}}
+                {{form.title(class="form_control")}}
+            </div>
+            <div class="form-group">
+                {{form.body.label(class="form-group-label")}}
+                {{form.body(class="form_control")}}
+            </div>
+            <div class="form-group">
+                {{form.submit(class="btn btn-outline-info")}}
+            </div>
+        </form>
+    </div>
+</div>
+{%endblock content%}
